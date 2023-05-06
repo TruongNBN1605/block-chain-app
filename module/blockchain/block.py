@@ -1,4 +1,4 @@
-import hashlib
+import hashlib, json
 
 class Block:
     def __init__(self, data):
@@ -9,7 +9,7 @@ class Block:
         self.totalTime = '0'
     
     def hash(block):
-        data = block.data + block.prevHash + str(block.nonce)
+        data = str(block.data) + block.prevHash + str(block.nonce)
         return hashlib.sha256(data.encode('utf-8')).hexdigest()
     
     def checkHash(block):
