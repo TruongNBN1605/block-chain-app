@@ -16,3 +16,6 @@ class Block:
         hash = Block.hash(block)
         check = hash.startswith("00")
         return check
+    
+    def __str__(self):
+        return f"Data: {self.data}\nPrevHash: {self.prevHash}\nHash: {self.hash}\nNonce: {self.nonce}\nTotalTime: {self.totalTime}"

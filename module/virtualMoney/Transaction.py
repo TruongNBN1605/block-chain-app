@@ -9,4 +9,4 @@ class Transaction:
         self.toId = toId
         self.amount = amount
     def __str__(self):
-        return f"{self.fromId} transfers {self.toId} {self.amount} "
+        return f"{self.fromId} chuyển cho {self.toId} {self.amount}."

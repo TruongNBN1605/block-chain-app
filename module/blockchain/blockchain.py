@@ -35,11 +35,9 @@ class BlockChain:
         return True
 
     # DEV: print blockchain data
-    def print(self):
+    def __str__(self):
+        rs = ""
         for block in self.chain:
-            print("Data:", block.data)
-            print("PrevHash:", block.prevHash)
-            print("Hash:", block.hash)
-            print("Nonce:", block.nonce)
-            print("totalTime:", block.totalTime)
-            print()
+            rs += str(block)
+            rs += "\n\n"
+        return rs
